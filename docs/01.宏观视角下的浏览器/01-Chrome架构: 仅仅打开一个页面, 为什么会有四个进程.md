@@ -99,3 +99,8 @@ GPU 进程: 3D CSS, 网页绘制, UI 界面绘制;
 同一站点: 相同协议,且根域名相同的站点;
 
 结论: 如果两个标签页位于同一个浏览上下文且属于同一个站点,且没有设置 noopener 或 noreferrer,那么这两个标签页会被浏览器分配到同一个渲染进程中,否则将会使用不同的渲染进程渲染页面;
+
+## 参考资料
+
+[关于线程的简要介绍EN](https://www.internalpointers.com/post/gentle-introduction-multithreading)  
+[关于线程的简要介绍CN](https://mp.weixin.qq.com/s/w0VETkkXI83Fu0YghpYlkw)
