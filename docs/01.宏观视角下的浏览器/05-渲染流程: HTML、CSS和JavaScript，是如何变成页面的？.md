@@ -1,4 +1,28 @@
-# 06 | 渲染流程（下）：HTML、CSS 和 JavaScript，是如何变成页面的？
+# 渲染流程: HTML、CSS 和 JavaScript，是如何变成页面的？
+
+## 构建 DOM 树
+
+渲染进程无法直接理解从网络进程接收的 HTML,所以需要将 HTML 转化为渲染进程能够理解的 DOM 树;
+
+打开浏览器开发者工具,控制台打印 `document`,查看 DOM 树;
+
+## 样式计算
+
+样式计算的目的是计算出 DOM 节点中每个元素的具体样式;
+
+1. 转换 CSS 为浏览器能够理解的 styleSheets (打开浏览器开发者工具,控制台打印`document.styleSheets`,查看转换后的`styleSheets`);
+2. 转换样式表中的属性值,使其标准化.  
+   CSS 样式表中有很多别名,例如 `color:red;font-weight:bold;`,需要将其转换为易于渲染引擎理解的标准化计算值,`color:rgb(0,0,255);font-weight:700;`
+3. 计算出每个 DOM 节点的具体样式;  
+   计算 DOM 节点的具体样式,涉及到 CSS 的继承丶层叠规则和优先级;[关于 CSS 继承丶层叠规则和优先级](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+
+## 布局阶段
+
+现在已经有 DOM 树和 DOM 树节点的具体样式,但要将页面准确的显示出来,还需要知道 DOM 节点的位置信息;那么就需要计算出 DOM 树中可见元素的位置信息,计算过程称之为布局;
+
+1. 创建布局树  
+   DOM 树中除了常见的布局元素,还有很多不可见的元素,比如 head,style,script 标签,另外还有使用 CSS 样式隐藏的元素,所以在显示之前,还需要构建一棵只包含可见元素的布局树;
+2. 布局计算
 
 ## 分层
 
