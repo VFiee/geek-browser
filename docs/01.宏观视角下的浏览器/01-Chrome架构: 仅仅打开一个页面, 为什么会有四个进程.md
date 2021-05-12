@@ -1,6 +1,6 @@
 # 仅仅打开一个页面,为什么会有四个进程?
 
-打开[传送门](https://time.geekbang.org/column/intro/216)页面,再打开浏览器任务管理器, 会发现有六个进程,为什么会有六个进程呢?
+[打开页面](https://time.geekbang.org/column/intro/216),再打开浏览器任务管理器, 会发现有六个进程,为什么会有六个进程呢?
 
 ![任务管理器](../images/01/01.png)
 
@@ -102,5 +102,5 @@ GPU 进程: 3D CSS, 网页绘制, UI 界面绘制;
 
 ## 参考资料
 
-[关于线程的简要介绍EN](https://www.internalpointers.com/post/gentle-introduction-multithreading)  
-[关于线程的简要介绍CN](https://mp.weixin.qq.com/s/w0VETkkXI83Fu0YghpYlkw)
+[关于线程的简要介绍 EN](https://www.internalpointers.com/post/gentle-introduction-multithreading)  
+[关于线程的简要介绍 CN](https://mp.weixin.qq.com/s/w0VETkkXI83Fu0YghpYlkw)
